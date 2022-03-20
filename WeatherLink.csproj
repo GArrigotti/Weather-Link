@@ -10,6 +10,9 @@
     <Description>The package is a simple wrapper for the Weather-Link Api.  Should allow you to easily grab the stations on an account, current conditions, and historic conditions.</Description>
     <Copyright>March, 2022</Copyright>
     <RepositoryType>https://github.com/GArrigotti/Weather-Link</RepositoryType>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <FileVersion>1.0.1</FileVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

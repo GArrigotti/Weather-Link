@@ -22,7 +22,7 @@ namespace WeatherLink.Facade
             return new TokenRecord(BitConverter.ToString(hash.ComputeHash(Encoding.UTF8.GetBytes(data))).Replace("-", ""), expiration);
         }
 
-        public async Task<IEnumerable<TEntity>> GetAsync<TEntity>(string url)
+        public async Task<TEntity> GetAsync<TEntity>(string url)
         {
             try
             {
@@ -30,7 +30,7 @@ namespace WeatherLink.Facade
                 response.EnsureSuccessStatusCode();
 
                 var content = await response.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<IEnumerable<TEntity>>(content);
+                return JsonConvert.DeserializeObject<TEntity>(content);
             }
 
             catch (Exception exception)
